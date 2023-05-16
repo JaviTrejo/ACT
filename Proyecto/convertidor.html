@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Alejandro</title>
+    <link rel="stylesheet" href="css/style.css" as="text/css">
+    <link rel="stylesheet" href="normalize.css" as="text/css">
+    <link rel="preload" href="normalize.css" as="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="lista.html">Lista de tareas</a>
+            <a href="calendario.html">Calendario</a>
+            <a href="Calculadora.html">Calculadora</a>
+            <a href="notas.html">Notas</a>
+            <a href="convertidor.html">Converitdor de moneda</a>
+            <a href="menu.html">Menu de aplicaciones</a>
+        </nav>
+    </div>
+    <form name="convertidor">
+        <h2><br>Costo del Dolar = 17.98</h2>
+        <br><h2>Cantidad MX: <input type="text" name="pesos"></h2>
+        <br><h2>Dolares USD: <input type="text" name="dolar"></h2>
+        <br><br><input type="button" value="convertir"  onclick="calcular();">
+    </form>
+
+    <script>
+        function calcular(){
+            var pes = (document.convertidor.pesos.value)*1;
+            var tot = pes / 17.98;
+            tot = tot.toFixed(2);
+
+            document.convertidor.dolar.value = tot;
+        }
+
+    </script>
+</body>
+</html>
